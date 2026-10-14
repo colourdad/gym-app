@@ -1,0 +1,85 @@
+import type { Program } from '../../types';
+
+export const october2026: Program = {
+  id: 'oct-2026',
+  name: 'October 2026',
+  startDate: '2026-10-05',
+  weeks: 6,
+  restNote: 'Take 1–2 minutes rest between each set/exercise.',
+  schedule: [
+    { day: 1, label: 'Lower Body 1', workoutIds: ['lower-1'] },
+    { day: 2, label: 'Bouldering', workoutIds: ['bouldering'] },
+    { day: 3, label: 'Upper Body + Dead Hangs', workoutIds: ['upper'] },
+    { day: 4, label: 'Pilates or Abs/Mobility', workoutIds: ['pilates', 'core'] },
+    { day: 5, label: 'Lower Body 2', workoutIds: ['lower-2'] },
+    { day: 6, label: 'Hike or Bouldering', workoutIds: ['hike', 'bouldering'] },
+    { day: 0, label: 'Rest', workoutIds: [] },
+  ],
+  workouts: [
+    {
+      id: 'lower-1',
+      name: 'Lower Body 1',
+      subtitle: 'Glute & posterior chain',
+      exercises: [
+        { id: 'glute-bridge', name: 'Kas Glute Bridge or Hip Thrust', target: '3–4 × 8-10', sets: 4, measure: 'weight' },
+        { id: 'rdl', name: 'Romanian Deadlifts (RDLs)', target: '3 × 8-10', sets: 3, measure: 'weight' },
+        { id: 'ham-curl', name: 'Lying Hamstring Curls', target: '3 × 10-12', sets: 3, measure: 'weight' },
+        { id: 'step-ups', name: 'Dumbbell or Cable Step-Ups', target: '3 × 10-12', sets: 3, measure: 'weight' },
+        { id: 'glute-ext', name: 'Glute Extensions', target: '3 × 12-15', sets: 3, measure: 'weight' },
+      ],
+    },
+    {
+      id: 'upper',
+      name: 'Upper Body + Dead Hangs',
+      subtitle: 'Chest, shoulders & push-dominant',
+      exercises: [
+        { id: 'incline-db-press', name: 'Incline Dumbbell Press', target: '3 × 8-10', sets: 3, measure: 'weight' },
+        { id: 'ohp', name: 'Barbell Standing Overhead Press', target: '3 × 6-8', sets: 3, measure: 'weight' },
+        { id: 'push-ups', name: 'Push-Ups (Kneeling Push-Ups)', target: '3 × 8-12', sets: 3, measure: 'reps' },
+        { id: 'tricep-ext', name: 'Overhead Cable or DB Tricep Extension', target: '3 × 10-12', sets: 3, measure: 'weight' },
+        { id: 'dead-hang', name: 'Dead Hangs (Bar or Hangboard)', target: '3 × 30-45 seconds', sets: 3, measure: 'time' },
+      ],
+    },
+    {
+      id: 'lower-2',
+      name: 'Lower Body 2',
+      subtitle: 'Glute & anterior focus',
+      exercises: [
+        { id: 'bss', name: 'Bulgarian Split Squats', target: '3 × 8-10 per leg', sets: 3, measure: 'weight' },
+        { id: 'goblet-squat', name: 'Goblet Squats or Hack Squats', target: '3 × 8-10', sets: 3, measure: 'weight' },
+        { id: 'cable-kickback', name: 'Cable Kickbacks (30° angle)', target: '3 × 12-15 per leg', sets: 3, measure: 'weight' },
+        { id: 'hip-abduction', name: 'Seated Hip Abductions', target: '3 × 12-15', sets: 3, measure: 'weight' },
+      ],
+    },
+    {
+      id: 'core',
+      name: 'Abs, Core & Mobility',
+      subtitle: 'Optional / flexible',
+      optional: true,
+      exercises: [
+        { id: 'banded-pull-ups', name: 'Banded Pull-Ups', target: 'No target set', sets: 3, measure: 'reps' },
+        { id: 'leg-raises', name: "Weighted Leg Raises (or Captain's Chair Leg/Knee Raises)", target: '3 × 10-12', sets: 3, measure: 'weight' },
+        { id: 'cable-crunch', name: 'Cable Rope Ab Crunches', target: '3 × 12-15', sets: 3, measure: 'weight' },
+        {
+          id: 'plank-circuit',
+          name: 'Plank Circuit',
+          target: '3 rounds',
+          sets: 3,
+          measure: 'check',
+          tip: 'Each round: 30s front plank, 30s left side plank, 30s right side plank. 60s rest between rounds.',
+        },
+        {
+          id: 'mobility',
+          name: 'Thoracic Spine & Shoulder Mobility',
+          target: '10–15 minutes',
+          sets: 1,
+          measure: 'check',
+          tip: 'Cat-cow, T-spine rotations, doorway pec stretches.',
+        },
+      ],
+    },
+    { id: 'bouldering', name: 'Bouldering', exercises: [] },
+    { id: 'pilates', name: 'Pilates', exercises: [] },
+    { id: 'hike', name: 'Hike', exercises: [] },
+  ],
+};
